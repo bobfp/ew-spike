@@ -1,0 +1,11 @@
+{
+  "name": "ew-spike",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bobfp/ew-spike.git",
+  "author": "bob <bcoop713@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "papercss": "^1.6.1"
+  }
+}
