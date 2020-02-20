@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+local_backend: true
+media_folder: 'site/static/uploads'
+public_folder: 'uploads'
+collections:
+  - name: "page-en" # Used in routes, e.g., /admin/collections/blog
+    label: "EN Page" # Used in the UI
+    folder: "site/content/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    filter: {field: "language", value: "en"}
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    path: "{{section}}/{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "fr"]}
+      - {label: "Section", name: "section", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "page-fr" # Used in routes, e.g., /admin/collections/blog
+    label: "FR Page" # Used in the UI
+    folder: "site/content/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    filter: {field: "language", value: "fr"}
+    extension: "markdown"
+    format: "fr.md"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    path: "{{section}}/{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "fr"]}
+      - {label: "Section", name: "section", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}

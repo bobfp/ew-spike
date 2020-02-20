@@ -1,4 +1,14 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
 assetDir = "../node_modules"
+sectionPagesMenu = "main"
+
+[languages]
+  [languages.en]
+		title = "My Blog"
+		languageName = "English"
+		weight = 1
+  [languages.fr]
+		title = "Mon Blogue"
+		languageName = "French"
+		weight = 2
