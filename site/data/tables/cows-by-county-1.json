@@ -1,0 +1,29 @@
+{
+  "title": "Cows by County2",
+  "data": {
+    "headers": [
+      {
+        "en": "County",
+        "fr": "Comté"
+      },
+      {
+        "en": "Cows",
+        "fr": "Vaches"
+      }
+    ],
+    "row": [
+      {
+        "cell": [
+          "Clark",
+          "2"
+        ]
+      },
+      {
+        "cell": [
+          "Washtenaw",
+          "13"
+        ]
+      }
+    ]
+  }
+}
